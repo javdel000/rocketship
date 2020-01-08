@@ -1,23 +1,5 @@
-function rocket () {
-    RocketShip = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . 1 1 f 1 1 1 1 f 1 1 . . . 
-. . . 1 1 1 f f f f 1 1 1 . . . 
-. . . 1 1 1 f 9 9 f 1 1 1 . . . 
-. . . 1 1 1 f 9 9 f 1 1 1 . . . 
-. . . 1 1 1 f f f f 1 1 1 . . . 
-. . . 1 1 f 1 1 1 1 f 1 1 . . . 
-. . . 1 f 1 1 1 1 1 1 f 1 . . . 
-. . . f f f f f f f f f f . . . 
-. . . 1 1 9 9 1 1 9 9 1 1 . . . 
-. . . 1 1 9 9 1 1 9 9 1 1 . . . 
-. . 2 1 1 1 1 1 1 1 1 1 1 2 . . 
-. 2 2 2 1 1 1 1 1 1 1 1 2 2 2 . 
-2 2 2 2 2 f f f f f f 2 2 2 2 2 
-2 2 2 . 1 5 5 5 5 5 5 1 2 2 2 2 
-2 2 . . . . . . . . . . . 2 2 2 
-`, SpriteKind.Player)
-    RocketShip.y = 100
+function start_countdown () {
+    info.startCountdown(5)
 }
 function background () {
     scene.setBackgroundImage(img`
@@ -143,8 +125,26 @@ f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 `)
 }
-function start_countdown () {
-    info.startCountdown(5)
+function rocket () {
+    RocketShip = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . 1 1 f 1 1 1 1 f 1 1 . . . 
+. . . 1 1 1 f f f f 1 1 1 . . . 
+. . . 1 1 1 f 9 9 f 1 1 1 . . . 
+. . . 1 1 1 f 9 9 f 1 1 1 . . . 
+. . . 1 1 1 f f f f 1 1 1 . . . 
+. . . 1 1 f 1 1 1 1 f 1 1 . . . 
+. . . 1 f 1 1 1 1 1 1 f 1 . . . 
+. . . f f f f f f f f f f . . . 
+. . . 1 1 9 9 1 1 9 9 1 1 . . . 
+. . . 1 1 9 9 1 1 9 9 1 1 . . . 
+. . 2 1 1 1 1 1 1 1 1 1 1 2 . . 
+. 2 2 2 1 1 1 1 1 1 1 1 2 2 2 . 
+2 2 2 2 2 f f f f f f 2 2 2 2 2 
+2 2 2 . 1 5 5 5 5 5 5 1 2 2 2 2 
+2 2 . . . . . . . . . . . 2 2 2 
+`, SpriteKind.Player)
+    RocketShip.y = 100
 }
 info.onCountdownEnd(function () {
     effects.starField.startScreenEffect()
